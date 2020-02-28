@@ -1,2 +1,2 @@
-# lab6
-Parse tree construction
+# lab6-solution
+Building parse tree

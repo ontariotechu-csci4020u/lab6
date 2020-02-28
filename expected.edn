@@ -1,0 +1,25 @@
+{:plan
+ [{:title "Lab6", :default {:check :all}}
+  (:check :Check "tests/test1.expr")
+  (:check :Check "tests/test2.expr")
+  (:check :Check "tests/test3.expr")
+  (:check :Check "tests/test4.expr")
+  (:check :Check "tests/test5.expr")],
+ :results
+ [{:return nil,
+   :duration 51,
+   :stdout "(expr (expr 1) + (expr (expr 2) * (expr 3)))\n"}
+  {:return nil, :duration 1, :stdout "(expr sin ( (expr 3.1415) ))\n"}
+  {:return nil,
+   :duration 2,
+   :stdout
+   "(expr ( (expr (expr (expr sin ( (expr 10) )) * (expr sin ( (expr 10) ))) + (expr (expr cos ( (expr 10) )) * (expr cos ( (expr 10) )))) ))\n"}
+  {:return nil,
+   :duration 3,
+   :stdout
+   "(expr sum ( (exprList (expr 1) , (expr 2) , (expr 3) , (expr 4)) ))\n"}
+  {:return nil,
+   :duration 2,
+   :stdout
+   "(expr sin ( (expr (expr 3.1415) * (expr sum ( (exprList (expr cos ( (expr 1) )) , (expr cos ( (expr 2) )) , (expr cos ( (expr 3) ))) ))) ))\n"}],
+ :version "1.0"}
